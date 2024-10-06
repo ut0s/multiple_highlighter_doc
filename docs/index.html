@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2024-10-07 月 02:26 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="author" content="ut0s" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+<link rel="stylesheet" type="text/css" href="http://thomasf.github.io/solarized-css/solarized-light.min.css" />
+</head>
+<body>
+<div id="content" class="content">
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgd9a2986">1. Multiple Highlighter</a>
+<ul>
+<li>
+<ul>
+<li><a href="#org4e47e23">1.0.1. Privacy Policy</a></li>
+<li><a href="#org856c7f9">1.0.2. Information Collection and Use</a></li>
+<li><a href="#org8f464d0">1.0.3. Third Party Access</a></li>
+<li><a href="#org1e9b5ff">1.0.4. Opt-Out Rights</a></li>
+<li><a href="#orgff8f4cf">1.0.5. Data Retention Policy</a></li>
+<li><a href="#orgaccda48">1.0.6. Children</a></li>
+<li><a href="#orgfbcc04b">1.0.7. Security</a></li>
+<li><a href="#orgf31a88d">1.0.8. Changes</a></li>
+<li><a href="#orgb10c2f1">1.0.9. Your Consent</a></li>
+<li><a href="#org413c7b2">1.0.10. Contact Us</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgd9a2986" class="outline-2">
+<h2 id="orgd9a2986"><span class="section-number-2">1.</span> Multiple Highlighter</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-org4e47e23" class="outline-4">
+<h4 id="org4e47e23"><span class="section-number-4">1.0.1.</span> Privacy Policy</h4>
+<div class="outline-text-4" id="text-1-0-1">
+<p>
+This privacy policy applies to the Multiple Highlighter (hereby referred to as "Application") for devices that was created by (hereby referred to as "Service Provider") as an Ad Supported service. This service is intended for use "AS IS".
+</p>
+</div>
+</div>
+
+<div id="outline-container-org856c7f9" class="outline-4">
+<h4 id="org856c7f9"><span class="section-number-4">1.0.2.</span> Information Collection and Use</h4>
+<div class="outline-text-4" id="text-1-0-2">
+<p>
+The Application collects information when you download and use it. This information may include information such as
+</p>
+
+<ul class="org-ul">
+<li>Your device's Internet Protocol address (e.g. IP address)</li>
+<li>The pages of the Application that you visit, the time and date of your visit, the time spent on those pages</li>
+<li>The time spent on the Application</li>
+<li>The operating system you use on your device</li>
+</ul>
+
+<p>
+The Application does not gather precise information about the location of your device.
+</p>
+
+<p>
+The Application collects your device's location, which helps the Service Provider determine your approximate geographical location and make use of in below ways:
+</p>
+
+<ul class="org-ul">
+<li>Geolocation Services: The Service Provider utilizes location data to provide features such as personalized content, relevant recommendations, and location-based services.</li>
+<li>Analytics and Improvements: Aggregated and anonymized location data helps the Service Provider to analyze user behavior, identify trends, and improve the overall performance and functionality of the Application.</li>
+<li>Third-Party Services: Periodically, the Service Provider may transmit anonymized location data to external services. These services assist them in enhancing the Application and optimizing their offerings.</li>
+</ul>
+
+<p>
+The Service Provider may use the information you provided to contact you from time to time to provide you with important information, required notices and marketing promotions.
+</p>
+
+<p>
+For a better experience, while using the Application, the Service Provider may require you to provide us with certain personally identifiable information, including but not limited to use id. The information that the Service Provider request will be retained by them and used as described in this privacy policy.
+</p>
+
+<p>
+The use of information received from Google APIs will adhere to the Chrome Web Store User Data Policy, including the Limited Use requirements.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8f464d0" class="outline-4">
+<h4 id="org8f464d0"><span class="section-number-4">1.0.3.</span> Third Party Access</h4>
+<div class="outline-text-4" id="text-1-0-3">
+<p>
+Only aggregated, anonymized data is periodically transmitted to external services to aid the Service Provider in improving the Application and their service. The Service Provider may share your information with third parties in the ways that are described in this privacy statement.
+</p>
+
+<p>
+Please note that the Application utilizes third-party services that have their own Privacy Policy about handling data. Below are the links to the Privacy Policy of the third-party service providers used by the Application:
+</p>
+
+<ul class="org-ul">
+<li><a href="https://marketingplatform.google.com/about/analytics/terms/us/">Google Analytics</a></li>
+</ul>
+
+<p>
+The Service Provider may disclose User Provided and Automatically Collected Information:
+</p>
+
+<ul class="org-ul">
+<li>as required by law, such as to comply with a subpoena, or similar legal process;</li>
+<li>when they believe in good faith that disclosure is necessary to protect their rights, protect your safety or the safety of others, investigate fraud, or respond to a government request;</li>
+<li>with their trusted services providers who work on their behalf, do not have an independent use of the information we disclose to them, and have agreed to adhere to the rules set forth in this privacy statement.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org1e9b5ff" class="outline-4">
+<h4 id="org1e9b5ff"><span class="section-number-4">1.0.4.</span> Opt-Out Rights</h4>
+<div class="outline-text-4" id="text-1-0-4">
+<p>
+You can stop all collection of information by the Application easily by uninstalling it. You may use the standard 2uninstall processes as may be available as part of your device or via the application marketplace or network.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgff8f4cf" class="outline-4">
+<h4 id="orgff8f4cf"><span class="section-number-4">1.0.5.</span> Data Retention Policy</h4>
+<div class="outline-text-4" id="text-1-0-5">
+<p>
+The Service Provider will retain User Provided data for as long as you use the Application and for a reasonable time thereafter. If you'd like them to delete User Provided Data that you have provided via the Application, please contact them at ut0s.in.da.shell@gmail.com and they will respond in a reasonable time.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgaccda48" class="outline-4">
+<h4 id="orgaccda48"><span class="section-number-4">1.0.6.</span> Children</h4>
+<div class="outline-text-4" id="text-1-0-6">
+<p>
+The Service Provider does not use the Application to knowingly solicit data from or market to children under the age of 13.
+</p>
+
+<p>
+The Application does not address anyone under the age of 13. The Service Provider does not knowingly collect personally identifiable information from children under 13 years of age. In the case the Service Provider discover that a child under 13 has provided personal information, the Service Provider will immediately delete this from their servers. If you are a parent or guardian and you are aware that your child has provided us with personal information, please contact the Service Provider (ut0s.in.da.shell@gmail.com) so that they will be able to take the necessary actions.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfbcc04b" class="outline-4">
+<h4 id="orgfbcc04b"><span class="section-number-4">1.0.7.</span> Security</h4>
+<div class="outline-text-4" id="text-1-0-7">
+<p>
+The Service Provider is concerned about safeguarding the confidentiality of your information. The Service Provider provides physical, electronic, and procedural safeguards to protect information the Service Provider processes and maintains.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf31a88d" class="outline-4">
+<h4 id="orgf31a88d"><span class="section-number-4">1.0.8.</span> Changes</h4>
+<div class="outline-text-4" id="text-1-0-8">
+<p>
+This Privacy Policy may be updated from time to time for any reason. The Service Provider will notify you of any changes to the Privacy Policy by updating this page with the new Privacy Policy. You are advised to consult this Privacy Policy regularly for any changes, as continued use is deemed approval of all changes.
+</p>
+
+<p>
+This privacy policy is effective as of 2024-09-08
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb10c2f1" class="outline-4">
+<h4 id="orgb10c2f1"><span class="section-number-4">1.0.9.</span> Your Consent</h4>
+<div class="outline-text-4" id="text-1-0-9">
+<p>
+By using the Application, you are consenting to the processing of your information as set forth in this Privacy Policy now and as amended by us.
+</p>
+</div>
+</div>
+<div id="outline-container-org413c7b2" class="outline-4">
+<h4 id="org413c7b2"><span class="section-number-4">1.0.10.</span> Contact Us</h4>
+<div class="outline-text-4" id="text-1-0-10">
+<p>
+If you have any questions regarding privacy while using the Application, or have questions about the practices, please contact the Service Provider via email at ut0s.in.da.shell@gmail.com.
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: ut0s</p>
+<p class="date">Created: 2024-10-07 月 02:26</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
